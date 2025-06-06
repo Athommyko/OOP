@@ -7,6 +7,8 @@ public class Pessoa {
     private String email;
     private String telefone;
     private Endereco endereco;
+    private boolean dependentes;
+
 
     public Pessoa(){}
 
@@ -24,6 +26,14 @@ public class Pessoa {
         this.idade = idade;
         this.email = email;
         this.telefone = telefone;
+    }
+
+    public boolean hasDependentes(){
+        return dependentes;
+    }
+
+    public void setDependentes(boolean dependentes){
+        this.dependentes = dependentes;
     }
 
     public Endereco getEndereco(){
@@ -61,4 +71,13 @@ public class Pessoa {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    @Override
+    public String toString() {
+        return "Pessoa [id=" + id + ", nome=" + nome + ", idade=" + idade + ", email=" + email + ", telefone="
+                + telefone + ", endereco=" + endereco + ", dependentes=" + dependentes + "]";
+    }
+
+    
+    
 }
